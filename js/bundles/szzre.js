@@ -1,7 +1,7 @@
 var pageComponent =
-webpackJsonppageComponent([9],{
+webpackJsonppageComponent([4],{
 
-/***/ 264:
+/***/ 280:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43,9 +43,9 @@ __webpack_require__(15);
 
 __webpack_require__(16);
 
-var _searchSoy = __webpack_require__(265);
+var _step_3Soy = __webpack_require__(281);
 
-var _searchSoy2 = _interopRequireDefault(_searchSoy);
+var _step_3Soy2 = _interopRequireDefault(_step_3Soy);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55,27 +55,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var pageDocsSearch = function (_Component) {
-  _inherits(pageDocsSearch, _Component);
+var szzre = function (_Component) {
+  _inherits(szzre, _Component);
 
-  function pageDocsSearch() {
-    _classCallCheck(this, pageDocsSearch);
+  function szzre() {
+    _classCallCheck(this, szzre);
 
-    return _possibleConstructorReturn(this, (pageDocsSearch.__proto__ || Object.getPrototypeOf(pageDocsSearch)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (szzre.__proto__ || Object.getPrototypeOf(szzre)).apply(this, arguments));
   }
 
-  return pageDocsSearch;
+  return szzre;
 }(_metalComponent2.default);
 
 ;
 
-_metalSoy2.default.register(pageDocsSearch, _searchSoy2.default);
+_metalSoy2.default.register(szzre, _step_3Soy2.default);
 
-exports.default = pageDocsSearch;
+exports.default = szzre;
 
 /***/ }),
 
-/***/ 265:
+/***/ 281:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -84,7 +84,7 @@ exports.default = pageDocsSearch;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.templates = exports.pageDocsSearch = undefined;
+exports.templates = exports.szzre = undefined;
 
 var _metalComponent = __webpack_require__(1);
 
@@ -106,15 +106,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var templates;
 goog.loadModule(function (exports) {
 
-  // This file was automatically generated from search.soy.
+  // This file was automatically generated from step_3.soy.
   // Please don't edit this file by hand.
 
   /**
-   * @fileoverview Templates in namespace pageDocsSearch.
+   * @fileoverview Templates in namespace szzre.
    * @public
    */
 
-  goog.module('pageDocsSearch.incrementaldom');
+  goog.module('szzre.incrementaldom');
 
   /** @suppress {extraRequire} */
   var soy = goog.require('soy');
@@ -137,15 +137,15 @@ goog.loadModule(function (exports) {
   var itext = IncrementalDom.text;
   var iattr = IncrementalDom.attr;
 
-  var $templateAlias3 = _metalSoy2.default.getTemplate('ElectricSearch.incrementaldom', 'render');
+  var $templateAlias2 = _metalSoy2.default.getTemplate('ElectricCode.incrementaldom', 'render');
 
-  var $templateAlias2 = _metalSoy2.default.getTemplate('Sidebar.incrementaldom', 'render');
-
-  var $templateAlias1 = _metalSoy2.default.getTemplate('main.incrementaldom', 'render');
+  var $templateAlias1 = _metalSoy2.default.getTemplate('tutorial.incrementaldom', 'render');
 
   /**
    * @param {{
-   *    site: (?)
+   *    page: (?),
+   *    site: (?),
+   *    elementClasses: (?)
    * }} opt_data
    * @param {(null|undefined)=} opt_ignored
    * @param {Object<string, *>=} opt_ijData
@@ -153,66 +153,87 @@ goog.loadModule(function (exports) {
    * @suppress {checkTypes}
    */
   function $render(opt_data, opt_ignored, opt_ijData) {
-    var $$temp;
-    var param294 = function param294() {
-      $templateAlias2({ section: opt_data.site.index.children['docs'], site: opt_data.site }, null, opt_ijData);
-      ie_open('div', null, null, 'class', 'sidebar-offset');
-      ie_open('div', null, null, 'class', 'container-hybrid docs-home-top');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'col-xs-16');
-      ie_open('h1', null, null, 'class', 'docs-home-top-title');
-      ie_open('span');
-      itext('Electric');
-      ie_close('span');
-      itext(' Docs');
-      ie_close('h1');
-      ie_open('p', null, null, 'class', 'docs-home-top-description');
-      itext('Start learning how to leverage the power of ');
-      var dyn26 = opt_data.site.title;
-      if (typeof dyn26 == 'function') dyn26();else if (dyn26 != null) itext(dyn26);
+    var param415 = function param415() {
+      ie_open('h2');
+      var dyn32 = opt_data.page.title;
+      if (typeof dyn32 == 'function') dyn32();else if (dyn32 != null) itext(dyn32);
+      ie_close('h2');
+      ie_open('p');
+      itext('An Async.Executor is a piece of code that runs asynchronously. In Async.apex, all codes that run asynchronously need to be placed in Async.Executor.');
+      ie_close('p');
+      ie_open('p');
+      itext('To create an Async by using an Async Executor, we will create an Executor first.');
+      ie_close('p');
+      $templateAlias2({ code: 'public class HelloWorldExecutor extends Async.Executor {\n    public HelloWorldExecutor() {\n        super(0);\n    }\n\n    public override Object exec() {\n        this.resolve(\'HelloWorld\');\n    }\n}', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('Async.Executor is somehow similar with Func, right? It is because Async.Executor is just a subclass of Func. The difference lies in that Async.Executor provides two extra methods: ');
+      ie_open('code');
+      itext('resolve');
+      ie_close('code');
+      itext(' and ');
+      ie_open('code');
+      itext('reject');
+      ie_close('code');
       itext('.');
       ie_close('p');
-      ie_close('div');
-      ie_close('div');
-      ie_open('div', null, null, 'class', 'row');
-      ie_open('div', null, null, 'class', 'container-hybrid');
-      $templateAlias3({ action: '/docs/search.html', dataURL: (($$temp = opt_data.site.basePath) == null ? '' : $$temp) + '/site.json', path: '/docs/', placeholder: 'Search Docs' }, null, opt_ijData);
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
-      ie_close('div');
+      ie_open('p');
+      itext('By invoking ');
+      ie_open('code');
+      itext('this.resolve(Object)');
+      ie_close('code');
+      itext(', we notify the Async with the success value, while by invoking ');
+      ie_open('code');
+      itext('this.reject(Object)');
+      ie_close('code');
+      itext(' we notify the Async with the error.');
+      ie_close('p');
+      ie_open('p');
+      itext('Then we create an Async like this:');
+      ie_close('p');
+      $templateAlias2({ code: 'Async promise = new Async(new HelloWorldExecutor());', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('Most of the time, we have an alternative, which is based on Funcs from R.apex.');
+      ie_close('p');
+      $templateAlias2({ code: 'public class HelloWorldFunc extends Func {\n    public HelloWorldFunc() {\n        super(0);\n    }\n\n    public override Object exec() {\n        return \'HelloWorld\';\n    }\n}\n\nAsync promise = new Async(new HelloWorldFunc());', mode: 'javascript' }, null, opt_ijData);
+      ie_open('p');
+      itext('These two version are equivalent.');
+      ie_close('p');
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.page.title);
+      ie_close('input');
+      ie_open('input', null, null, 'type', 'hidden', 'value', opt_data.site.title);
+      ie_close('input');
     };
-    $templateAlias1(soy.$$assignDefaults({ elementClasses: 'docs', content: param294 }, opt_data), null, opt_ijData);
+    $templateAlias1(soy.$$assignDefaults({ content: param415 }, opt_data), null, opt_ijData);
   }
   exports.render = $render;
   if (goog.DEBUG) {
-    $render.soyTemplateName = 'pageDocsSearch.render';
+    $render.soyTemplateName = 'szzre.render';
   }
 
-  exports.render.params = ["site"];
-  exports.render.types = { "site": "?" };
+  exports.render.params = ["page", "site"];
+  exports.render.types = { "page": "?", "site": "?" };
   exports.templates = templates = exports;
   return exports;
 });
 
-var pageDocsSearch = function (_Component) {
-  _inherits(pageDocsSearch, _Component);
+var szzre = function (_Component) {
+  _inherits(szzre, _Component);
 
-  function pageDocsSearch() {
-    _classCallCheck(this, pageDocsSearch);
+  function szzre() {
+    _classCallCheck(this, szzre);
 
-    return _possibleConstructorReturn(this, (pageDocsSearch.__proto__ || Object.getPrototypeOf(pageDocsSearch)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (szzre.__proto__ || Object.getPrototypeOf(szzre)).apply(this, arguments));
   }
 
-  return pageDocsSearch;
+  return szzre;
 }(_metalComponent2.default);
 
-_metalSoy2.default.register(pageDocsSearch, templates);
-exports.pageDocsSearch = pageDocsSearch;
+_metalSoy2.default.register(szzre, templates);
+exports.szzre = szzre;
 exports.templates = templates;
 exports.default = templates;
 /* jshint ignore:end */
 
 /***/ })
 
-},[264]);
+},[280]);
